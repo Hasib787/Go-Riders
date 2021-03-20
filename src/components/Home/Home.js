@@ -1,9 +1,10 @@
 import React from 'react';
-
+import BgImage from '../../images/Bg.png';
+import './Home.css'
 const Home = () => {
     return (
-        <div>
-            <h2>This is Home</h2>
+        <div style={{ backgroundImage: `url(${BgImage})` }} className="bg-image">
+            
         </div>
     );
 };

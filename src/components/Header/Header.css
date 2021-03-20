@@ -1,0 +1,10 @@
+ul li{
+    display: inline;
+    margin-left: 50px;
+    
+  }
+  
+  ul a{
+    text-decoration: none;
+    font-weight: bold;
+  }
