@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <div>
+        <div className="header-container">
             {/* Nav Start  */}
             <nav className="container navbar navbar-expand-lg navbar-light">
                 

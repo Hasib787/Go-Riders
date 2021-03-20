@@ -5,6 +5,7 @@ const Home = () => {
     return (
         <div style={{ backgroundImage: `url(${BgImage})` }} className="bg-image">
             
+            
         </div>
     );
 };
