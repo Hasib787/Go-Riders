@@ -32,6 +32,7 @@
 }
 .signIn-google-facebook{
     text-align: center;
+    margin-bottom: 50px;
 }
 .signIn-google-facebook Button{
     margin:10px;
