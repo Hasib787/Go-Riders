@@ -30,3 +30,19 @@
     color:red;
     margin-left:14px;
 }
+.signIn-google-facebook{
+    text-align: center;
+}
+.signIn-google-facebook Button{
+    margin:10px;
+    width: 330px;
+    background-color: white;
+}
+#facebookLogo{
+    width: 30px;
+    margin-left: -73px;
+}
+#googleLogo{
+    width: 30px;
+    margin-left: -91px;
+}

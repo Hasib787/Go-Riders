@@ -1,3 +1,4 @@
+import { Button } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom'
 import './Header.css';
@@ -7,16 +8,16 @@ const Header = () => {
         <div className="header-container">
             {/* Nav Start  */}
             <nav className="container navbar navbar-expand-lg navbar-light">
-                
+
                 <div className="container d-flex justify-content-right">
-                <div><h2>Go Riders</h2></div>
+                    <div><h2>Go Riders</h2></div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                        <ul className="navbar-nav penguin-navbar fw-bold">
+                        <ul className="navbar-nav  fw-bold">
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" ><Link to="/home">Home</Link></a>
                             </li>
@@ -28,6 +29,11 @@ const Header = () => {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link"><Link to="/contact">Contact</Link></a>
+                            </li>
+                            <li className="nav-item">
+                                <Button id="btn" variant="contained" >
+                                <Link to="/login">Login</Link>
+                                </Button>
                             </li>
                         </ul>
                     </div>
