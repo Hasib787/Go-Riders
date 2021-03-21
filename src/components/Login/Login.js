@@ -105,8 +105,7 @@ const Login = () => {
                     handleResponse(res, true);
                 })
         }
-        console.log(event);
-       // event.preventDefault();
+        event.preventDefault();
     }
     
     return (
@@ -114,9 +113,9 @@ const Login = () => {
             <Card className={classes.root}>
                 <CardContent>
                     <Typography >
-                        <form className="login-form" onSubmit={handleSubmitSignIn(onSubmit)} >
+                        <form className="login-form" onSubmit={handleSubmitSignIn} >
                             <h3>Create an account</h3>
-                            {newUser && < input name="name" ref={register({ required: true, maxLength: 20 })} onBlur={handleBlur} placeholder="Name" />}
+                            {!newUser &&< input name="name" ref={register({ required: true, maxLength: 20 })} onBlur={handleBlur} placeholder="Name" />}
                             {errors.name && <span className="error">Name is required</span>}
 
                             < input name="email" type="email" ref={register({ required: true })} onBlur={handleBlur} placeholder="Email" />
@@ -125,14 +124,12 @@ const Login = () => {
                             < input name="password" type="password" ref={register({ required: true })} onBlur={handleBlur} placeholder="Password" />
                             {errors.password && <span className="error">Password is required</span>}
 
-                            < input name="confirmPassword" type="password" ref={register({ required: true })} onBlur={handleBlur} placeholder="Confirm Password" />
+                            {!newUser &&< input name="confirmPassword" type="password" ref={register({ required: true })} onBlur={handleBlur} placeholder="Confirm Password" />}
                             {errors.confirmPassword && <span className="error">Password is required</span>}
 
-                            <Button variant="contained" id='button' type="submit">
-                            {newUser ? 'Create an account' : 'Login'}
-                            </Button>
+                            <input type="submit"  id='button' value={!newUser ? 'Create an account' : 'Login'} />
                                    
-                            <p id="haveAccount">Already have an account? <span><Link>login</Link></span></p>
+                            <p id="haveAccount">Already have an account? <span><Link onClick={() => setNewUser(!newUser)} name="newUser"><label htmlFor="newUser">login</label></Link></span></p>
                         </form>
                         <p style={{ color: 'red' }}>{user.error}</p>
                         {user.success && <p style={{ color: 'green' }}>User {newUser ? 'Created' : 'Logged In'} Successfully</p>}
