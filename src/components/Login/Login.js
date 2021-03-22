@@ -22,9 +22,10 @@ const useStyles = makeStyles({
 });
 
 const Login = () => {
-    const { register, handleSubmit, watch, errors } = useForm();
+    const {register, watch, errors } = useForm();
     const onSubmit = data => console.log(data);
     console.log(watch("example"));
+
     const classes = useStyles();
 
     const [newUser, setNewUser] = useState(false)
@@ -90,7 +91,7 @@ const Login = () => {
             setUser(newUserInfo);
         }
     }
-    const handleSubmitSignIn = (event) => {
+     const handleSubmitSignIn = (event) => {
         if (newUser && user.email && user.password) {
             createUserWithEmailAndPassword(user.name, user.email, user.password)
                 .then(res => {
@@ -107,15 +108,18 @@ const Login = () => {
         }
         event.preventDefault();
     }
-    
+
     return (
         <div>
             <Card className={classes.root}>
                 <CardContent>
                     <Typography >
-                        <form className="login-form" onSubmit={handleSubmitSignIn} >
-                            <h3>Create an account</h3>
-                            {!newUser &&< input name="name" ref={register({ required: true, maxLength: 20 })} onBlur={handleBlur} placeholder="Name" />}
+                        <form className="login-form" onSubmit={handleSubmitSignIn}>
+                            {
+                                !newUser ? <h3 id="haveAccount">Create an account <Link onClick={() => setNewUser(!newUser)} name="newUser"><label htmlFor="newUser"></label></Link></h3>
+                                    : <h3 id="haveAccount">Login <Link onClick={() => setNewUser(!newUser)} name="newUser"><label htmlFor="newUser"></label></Link></h3>
+                            }
+                            {!newUser && < input name="name" ref={register({ required: true, maxLength: 20 })} onBlur={handleBlur} placeholder="Name" />}
                             {errors.name && <span className="error">Name is required</span>}
 
                             < input name="email" type="email" ref={register({ required: true })} onBlur={handleBlur} placeholder="Email" />
@@ -124,12 +128,15 @@ const Login = () => {
                             < input name="password" type="password" ref={register({ required: true })} onBlur={handleBlur} placeholder="Password" />
                             {errors.password && <span className="error">Password is required</span>}
 
-                            {!newUser &&< input name="confirmPassword" type="password" ref={register({ required: true })} onBlur={handleBlur} placeholder="Confirm Password" />}
+                            {!newUser && < input name="confirmPassword" type="password" ref={register({ required: true })} onBlur={handleBlur} placeholder="Confirm Password" />}
                             {errors.confirmPassword && <span className="error">Password is required</span>}
 
-                            <input type="submit"  id='button' value={!newUser ? 'Create an account' : 'Login'} />
-                                   
-                            <p id="haveAccount">Already have an account? <span><Link onClick={() => setNewUser(!newUser)} name="newUser"><label htmlFor="newUser">login</label></Link></span></p>
+                            <input type="submit" id='button' value={!newUser ? 'Create an account' : 'Login'} />
+                            {
+                                !newUser ? <p id="haveAccount">Already have an account? <span><Link onClick={() => setNewUser(!newUser)} name="newUser"><label htmlFor="newUser">login</label></Link></span></p>
+                                    : <p id="haveAccount">Don't have an account? <span><Link onClick={() => setNewUser(!newUser)} name="newUser"><label htmlFor="newUser">Create an account</label></Link></span></p>
+                            }
+
                         </form>
                         <p style={{ color: 'red' }}>{user.error}</p>
                         {user.success && <p style={{ color: 'green' }}>User {newUser ? 'Created' : 'Logged In'} Successfully</p>}
@@ -147,7 +154,6 @@ const Login = () => {
                         : <Button onClick={googleSignIn} variant="contained" >
                             <span><img id="googleLogo" src={googleLogo} alt="" /></span> Continue with google
                             </Button>
-
                 }
             </div>
         </div>

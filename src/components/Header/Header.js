@@ -2,8 +2,13 @@ import { Button } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom'
 import './Header.css';
+import { useContext } from 'react';
+import { UserContext } from '../../App';
+
+
 
 const Header = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div className="header-container">
             {/* Nav Start  */}
@@ -16,8 +21,8 @@ const Header = () => {
                         aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                        <ul className="navbar-nav  fw-bold">
+                    <div  className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <ul  className="navbar-nav  fw-bold">
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" ><Link to="/home">Home</Link></a>
                             </li>

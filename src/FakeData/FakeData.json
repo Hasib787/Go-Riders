@@ -6,116 +6,26 @@
     "image": "https://i.ibb.co/K6dhHNF/bike.png"
   }, {
     "id": 2,
-    "name": "Bike",
-    "number_of_person": 1,
-    "price": 30,
-    "image": "https://i.ibb.co/K6dhHNF/bike.png"
-  }, {
-    "id": 3,
-    "name": "Bike",
-    "number_of_person": 1,
-    "price": 32,
-    "image": "https://i.ibb.co/K6dhHNF/bike.png"
-  }, {
-    "id": 4,
     "name": "Car",
     "number_of_person": 4,
     "price": 65,
     "image": "https://i.ibb.co/gW72KGZ/car.png"
   }, {
-    "id": 5,
-    "name": "Car",
-    "number_of_person": 4,
-    "price": 66,
-    "image": "https://i.ibb.co/gW72KGZ/car.png"
-  }, {
-    "id": 6,
-    "name": "Car",
-    "number_of_person": 4,
-    "price": 68,
-    "image": "https://i.ibb.co/gW72KGZ/car.png"
-  }, {
-    "id": 7,
+    "id": 3,
     "name": "Bus",
     "number_of_person": 40,
     "price": 20,
     "image": "https://i.ibb.co/cyYBpvZ/bus.png"
-  }, {
-    "id": 8,
-    "name": "Bus",
-    "number_of_person": 40,
-    "price": 21,
-    "image": "https://i.ibb.co/cyYBpvZ/bus.png"
-  }, {
-    "id": 9,
-    "name": "Bus",
-    "number_of_person": 40,
-    "price": 22,
-    "image": "https://i.ibb.co/cyYBpvZ/bus.png"
-  }, {
-    "id": 10,
+  },{
+    "id": 4,
     "name": "Train",
     "number_of_person": 86,
     "price": 16,
     "image": "https://i.ibb.co/VDnZGh8/train.png"
   }, {
-    "id": 11,
-    "name": "Train",
-    "number_of_person": 86,
-    "price": 16,
-    "image": "https://i.ibb.co/VDnZGh8/train.png"
-  }, {
-    "id": 12,
-    "name": "Train",
-    "number_of_person": 86,
-    "price": 16,
-    "image": "https://i.ibb.co/VDnZGh8/train.png"
-  }, {
-    "id": 13,
+    "id": 5,
     "name": "CNG",
     "number_of_person": 2,
     "price": 50,
     "image": "https://i.ibb.co/N6w6CX7/cng.jpg"
-  }, {
-    "id": 14,
-    "name": "CNG",
-    "number_of_person": 2,
-    "price": 50,
-    "image": "https://i.ibb.co/N6w6CX7/cng.jpg"
-  }, {
-    "id": 15,
-    "name": "CNG",
-    "number_of_person": 2,
-    "price": 50,
-    "image": "https://i.ibb.co/N6w6CX7/cng.jpg"
-  }, {
-    "id": 16,
-    "name": "Alena",
-    "number_of_person": 3,
-    "price": "Euro",
-    "image": "Somoni"
-  }, {
-    "id": 17,
-    "name": "Leisha",
-    "number_of_person": 75,
-    "price": "Euro",
-    "image": "Koruna"
-  }, {
-    "id": 18,
-    "name": "Kat",
-    "number_of_person": 63,
-    "price": "Euro",
-    "image": "Ruble"
-  }, {
-    "id": 19,
-    "name": "Emmett",
-    "number_of_person": 83,
-    "price": "Ringgit",
-    "image": "Peso"
-  }, {
-    "id": 20,
-    "name": "Deerdre",
-    "number_of_person": 35,
-    "price": "Yuan Renminbi",
-    "image": "Yuan Renminbi"
   }]

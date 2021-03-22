@@ -1,6 +1,14 @@
-.bg-image{
+.bg-image {
     margin-top: -83px;
     height: 753px;
     background-position: center center;
     background-size: 100% 100%;
+}
+
+
+
+#image {
+    margin: 30px;
+    height: 150px;
+    width: 150px;
 }
