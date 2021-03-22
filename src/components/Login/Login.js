@@ -138,8 +138,7 @@ const Login = () => {
                             }
 
                         </form>
-                        <p style={{ color: 'red' }}>{user.error}</p>
-                        {user.success && <p style={{ color: 'green' }}>User {newUser ? 'Created' : 'Logged In'} Successfully</p>}
+                        
                     </Typography>
                 </CardContent>
             </Card>

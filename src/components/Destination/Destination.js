@@ -1,10 +1,14 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const Destination = () => {
     return (
-        <div>
-            <h3>This is Destination</h3>
-        </div>
+        <Container>
+            <Row>
+                <Col sm={8}>sm=8</Col>
+                <Col sm={4}>sm=4</Col>
+            </Row>
+        </Container>
     );
 };
 
