@@ -149,8 +149,7 @@ const Login = () => {
                 </Button>
                 <br />
                 {
-                    user.isSignedIn ? <button onClick={signOut}>Sign out</button>
-                        : <Button onClick={googleSignIn} variant="contained" >
+                     <Button onClick={googleSignIn} variant="contained" >
                             <span><img id="googleLogo" src={googleLogo} alt="" /></span> Continue with google
                             </Button>
                 }

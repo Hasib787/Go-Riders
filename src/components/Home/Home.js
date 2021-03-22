@@ -18,7 +18,8 @@ const Home = () => {
             <div className="rideCard"> 
                 {
                     rides.map(ride => <Rides ride={ride}></Rides>)
-                }</div>
+                }
+                </div>
         </div>
     );
 };
