@@ -1,0 +1,31 @@
+hr{
+    width: 100%;
+}
+#searchLocation{
+    margin-top: 30px;
+    background-color:rgb(201, 196, 196);
+    border-radius: 6px;
+    height: 200px;
+    
+}
+#searchLocation input{
+    margin-top: 10px;
+    width: 100%;
+    height: 39px;
+    border-radius: 5px;
+}
+#searchLocation p{
+    margin-top: 12px;
+}
+#searchbtn{
+    width:100%;
+    margin:15px 0px 15px 0px;
+}
+#map{
+    height: 655px;
+    margin-left:35px
+}
+#map  img{
+    height:650px;
+    width: 100%;
+}
