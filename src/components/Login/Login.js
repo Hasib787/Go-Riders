@@ -16,7 +16,7 @@ import { createUserWithEmailAndPassword, handleFbSignIn, handleGoogleSignIn, han
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 400,
+        minWidth: 400,
         margin: '30px 38%'
     },
 });

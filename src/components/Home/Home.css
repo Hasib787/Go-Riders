@@ -11,3 +11,14 @@
     gap: 1.5rem;
 }
 
+/*  Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 576px) {
+    .rideCard {
+      grid-template-columns: repeat(1, 1fr);
+      margin: -1300px 0px 20px 150px;
+    }
+    .bg-image{
+        margin-top: -83px;
+        height: 1500px;
+    }
+  }
