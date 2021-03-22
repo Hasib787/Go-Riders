@@ -5,9 +5,16 @@ import { Card } from 'react-bootstrap';
 const Rides = (props) => {
     const { name, image } = props.ride;
 
+    let cardStyle =
+        {
+            width: '12rem',
+        }
+
+    
+    
     return (
         <a style={{ color: 'black', textDecoration:'none'}} href="#" alt="Rides">
-            <Card className="cardContainer" style={{ width: '12rem' }}>
+            <Card className="cardContainer" style={cardStyle}>
             <Card.Img style={{
                 margin: '30px',
                 height: '100px',    

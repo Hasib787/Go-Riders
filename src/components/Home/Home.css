@@ -4,11 +4,10 @@
     background-position: center center;
     background-size: 100% 100%;
 }
-
-
-
-#image {
-    margin: 30px;
-    height: 150px;
-    width: 150px;
+.rideCard{
+    margin: -570px 250px 0px 250px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
+

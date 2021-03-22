@@ -11,9 +11,11 @@ const Home = () => {
         setRides(ridesData);
     }, [])
     return (
-        // style={{ backgroundImage: `url(${BgImage})` }} className="bg-image"
-        <div >
-            <div style={{margin: '50px 250px 0px 250px', display:'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem'}}> 
+        <div>
+            <div style={{ backgroundImage: `url(${BgImage})` }} className="bg-image">
+
+            </div>
+            <div className="rideCard"> 
                 {
                     rides.map(ride => <Rides ride={ride}></Rides>)
                 }</div>

@@ -1,9 +1,4 @@
-#cardContainer {
-  display: grid;
-  margin: 30px;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;    
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
