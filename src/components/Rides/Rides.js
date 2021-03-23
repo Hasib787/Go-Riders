@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Card } from 'react-bootstrap';
 import { useHistory } from 'react-router';
-import rideData from '../../FakeData/FakeData.json';
 
 const Rides = (props) => {
-    const { name, image } = props.ride;
-    const [rideId, setRideId] = useState([])
+    const { id, name, image } = props.ride;
 
-    useEffect(()=>{
-         setRideId(rideData.id);
-    },[])
     let cardStyle =
     {
         width: '12rem',
@@ -23,7 +18,7 @@ const Rides = (props) => {
 
 
     return (
-        <a onClick={() => showDestination(rideId)} style={{ color: 'black', textDecoration: 'none' }}  alt="Rides">
+        <a onClick={() => showDestination(id)} style={{ color: 'black', textDecoration: 'none' }}  alt="Rides">
             <Card className="cardContainer" style={cardStyle}>
                 <Card.Img style={{
                     margin: '30px',

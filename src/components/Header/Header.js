@@ -21,7 +21,7 @@ const Header = () => {
                         aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div  className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div  style={{textDecoration:'none'}} className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <ul  className="navbar-nav  fw-bold">
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" ><Link to="/home">Home</Link></a>
