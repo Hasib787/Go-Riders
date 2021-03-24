@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
+import Map from '../Map/Map'
 import './Destination.css';
-import GoogleMapReact from 'google-map-react';
-import map from '../../images/Map.png';
+
 
 const Destination = () => {
+    const [pickFrom, setPickFrom] = useState('');
+    const [pickTo, setPickTo] = useState('');
+
 
     return (
         <Container>
@@ -13,27 +16,33 @@ const Destination = () => {
                 <Col style={{ height: '280px' }} id="searchLocation" lg={3}>
                     <form action="">
                         <p>Pick From</p>
-                        <input type="text" />
+                        <input onBlur={e => setPickFrom(e.target.value)} type="text" placeholder="Pick From" />
                         <br />
+
                         <p>Pick To</p>
-                        <input type="text" />
+                        <input onBlur={e => setPickTo(e.target.value)} type="text" placeholder="Pick To" />
                         <br />
                         <Button id="searchbtn">Search</Button>
                     </form>
+                </Col >
+                <br/>
+                <Col style={{ height: '360px' }} id="searchLocation" lg={3}>
+                    <div id="location">
+                        <p id="pickFrom">{pickFrom}</p>
+                        <p>{pickTo}</p>
+                    </div>
+                    <div className="rideDetails">
+                        <img src="" alt=""/>
+                    </div>
+                    <div className="rideDetails">
+                     <img src="" alt=""/>
+                    </div>
+                    <div className="rideDetails">
+                        <img src="" alt=""/>
+                    </div>
                 </Col>
                 <Col id="map" lg={8}>
-                    <img src={map} alt=""/>
-                    {/* <GoogleMapReact
-                        bootstrapURLKeys={{ key:  }}
-                        defaultCenter={this.props.center}
-                        defaultZoom={this.props.zoom}
-                    >
-                        {/* <AnyReactComponent 
-                            lat={59.955413}
-                            lng={30.337844}
-                            text="My Marker"
-                        /> */}
-                    {/* </GoogleMapReact> */} 
+                    <Map></Map>
                 </Col>
             </Row>
         </Container>
