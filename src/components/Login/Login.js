@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     root: {
         minWidth: 400,
         margin: '30px 38%'
-    },
+    }
 });
 
 const Login = () => {

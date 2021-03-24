@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
+import { useParams } from 'react-router';
 import Map from '../Map/Map'
 import './Destination.css';
+import rideData from '../../FakeData/FakeData.json';
+
 
 
 const Destination = () => {
-
+    const {id} = useParams();
+    console.log(id);
     const [pickFrom, setPickFrom] = useState('');
     const [pickTo, setPickTo] = useState('');
     const [searchClicked, setSearchClicked] = useState();
+    const [rideDetail, setRideDetail] = useState([])
+    
+    
 
     const handleSearchBtn = () => {
         setSearchClicked(true)
@@ -29,7 +36,7 @@ const Destination = () => {
                         </div>
                         <div className="rideDetails">
                             <div className="rideInfo">
-                                <img src="" alt="" />
+                                <img src={rideDetail.image} alt="" />
                                 <p>name</p>
                                 <p>sit</p>
                                 <p className="ridePrice">$</p>
@@ -37,7 +44,7 @@ const Destination = () => {
                         </div>
                         <div className="rideDetails">
                             <div className="rideInfo">
-                                <img src="" alt="" />
+                                <img src={rideDetail.image} alt="" />
                                 <p>name</p>
                                 <p>sit</p>
                                 <p className="ridePrice">$</p>
@@ -45,7 +52,7 @@ const Destination = () => {
                         </div>
                         <div className="rideDetails">
                             <div className="rideInfo">
-                                <img src="" alt="" />
+                                <img src={rideDetail.image} alt="" />
                                 <p>name</p>
                                 <p>sit</p>
                                 <p className="ridePrice">$</p>
@@ -60,7 +67,7 @@ const Destination = () => {
                             <p>Pick To</p>
                             <input onBlur={e => setPickTo(e.target.value)} type="text" placeholder="Pick To" />
                             <br />
-                            <Button onClick={handleSearchBtn} id="searchbtn">Search</Button>
+                            <Button onClick={()=>handleSearchBtn()} id="searchbtn">Search</Button>
                         </form>
                     </Col >
 

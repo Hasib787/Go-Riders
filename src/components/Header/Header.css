@@ -1,6 +1,14 @@
 .header-container{
   margin-top:20px;
 }
+#webSiteName{
+  text-decoration:none;
+  color: block; 
+}
+a{
+  text-decoration: none;
+  color: black;
+}
 ul li{
     display: inline;
     margin-left: 50px;

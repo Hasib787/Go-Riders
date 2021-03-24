@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import BgImage from '../../images/Bg.png';
+import BgImage from '../../images/bg3.jpg';
 import ridesData from '../../FakeData/FakeData.json';
 import './Home.css'
 import Rides from '../Rides/Rides';
