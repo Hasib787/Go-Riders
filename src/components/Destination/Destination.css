@@ -39,6 +39,7 @@ hr{
     font-size: 18px;
 }
 #pickFrom{
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 .rideDetails{
@@ -47,6 +48,16 @@ hr{
     width:100%;
     border-radius: 5px;
     background-color:white;
+}
+.rideInfo{
+    display: flex;
+    margin-left: 10px;
+}
+.rideInfo p{
+    margin-left: 20px;
+}
+.ridePrice{
+    margin-left: 90px;
 }
 @media only screen and (max-width: 576px) {
     #map{
